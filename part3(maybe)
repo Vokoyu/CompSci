@@ -1,0 +1,95 @@
+ printf("%d,%d\n\n\n",numcheckp2[0],suitcheckp2[0]);
+  for(ll=0;ll<3;ll++){
+  if(p2flush == 0){
+      if(straightp2 == 0){
+        if(pairp2 == 0){
+            printf("%d,%d\t",numcheckp2[0],suitcheckp2[0]);
+            kk = (rand()%13);
+            dd = (rand()%4);
+            numcheckp2[ee]=kk;
+            numcheckp2[0]=3;
+            rr++;
+            ee++;
+            printf("%d",(kk%13));
+            
+            printf("%d,%d\n\n",numcheckp2[0],suitcheckp2[0]);
+            
+            
+         if(numcheckp2[0]==numcheckp2[1]){
+        pairp2++;
+    }
+        if(numcheckp2[0]==numcheckp2[2]){
+        pairp2++;
+    }
+        if(numcheckp2[0]==numcheckp2[3]){
+        pairp2++;
+    }
+        if(numcheckp2[0]==numcheckp2[4]){
+        pairp2++;
+    }
+        if(numcheckp2[1]==numcheckp2[2]){
+        pairp2++;
+    }
+        if(numcheckp2[1]==numcheckp2[3]){
+        pairp2++;
+    }
+        if(numcheckp2[1]==numcheckp2[4]){
+        pairp2++;
+    }
+        if(numcheckp2[2]==numcheckp2[3]){
+        pairp2++;
+    }
+        if(numcheckp2[2]==numcheckp2[4]){
+        pairp2++;
+    }
+        if(numcheckp2[3]==numcheckp2[4]){
+        pairp2++;
+    }
+    
+       if(suitcheckp2[0]==suitcheckp2[1]==suitcheckp2[2]==suitcheckp2[3]){
+        p2flush++;
+        }
+    
+        for (zz = 0 ; zz < 4; zz++)
+  {
+    for (cc = 0 ; cc < 4; cc++)
+    {
+      if (numcheckp2[cc] > numcheckp2[cc+1])
+      {
+        vv      = numcheckp2[cc];
+        numcheckp2[cc]   = numcheckp2[cc+1];
+        numcheckp2[cc+1] = vv;
+      }
+    }
+  }
+  
+          if((numcheckp2[0]==numcheckp2[1])&&(numcheckp2[1]==numcheckp2[2])&&(numcheckp2[2]==numcheckp2[3])){
+            p24oak++;}
+        if((numcheckp2[1]==numcheckp2[2])&&(numcheckp2[2]==numcheckp2[3])&&(numcheckp2[3]==numcheckp2[4])){
+            p24oak++;}
+            
+        if(numcheckp2[4]==(numcheckp2[3]+1)==(numcheckp2[2]+2)==(numcheckp2[1]+3)==(numcheckp2[0]+3)){
+    straightp2++; }
+    
+    
+                    if(pairp2>1){
+        if((numcheckp2[0]==numcheckp2[1])&&(numcheckp2[1]==numcheckp2[2])){
+            p13oak++;}
+        if((numcheckp2[1]==numcheckp2[2])&&(numcheckp2[2]==numcheckp2[3])){
+            p13oak++;}
+        if((numcheckp2[2]==numcheckp2[3])&&(numcheckp2[3]==numcheckp2[4])){
+            p13oak++;}
+}
+
+       if(p23oak == 1){
+            if(pairp2 == 4){
+                p2fullhouse++;
+            }
+        }
+
+
+        }    
+      
+      }
+  }
+}
